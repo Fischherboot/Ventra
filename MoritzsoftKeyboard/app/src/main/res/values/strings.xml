@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ime_name">Moritzsoft Keyboard</string>
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+    <string name="label_go_key">Los</string>
+    <string name="label_next_key">Weiter</string>
+    <string name="label_send_key">Senden</string>
+    <string name="label_subtype_de">Deutsch</string>
+    <string name="settings_name">Moritzsoft Keyboard Einstellungen</string>
+    <string name="language_selection_title">Eingabesprachen</string>
+    <string name="select_language">Eingabesprache wählen</string>
+    <string name="general_category">Allgemein</string>
+</resources>

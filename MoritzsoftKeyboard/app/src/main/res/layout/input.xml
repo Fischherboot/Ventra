@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moritzsoft.keyboard.MoritzsoftKeyboardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:keyPreviewLayout="@layout/preview"
+    android:keyBackground="@drawable/key_background"
+    android:keyTextColor="#FFFFFF"
+    android:keyTextSize="@dimen/key_text_size"
+    android:labelTextSize="@dimen/key_label_size"
+    android:background="#2A2B2B"
+    android:popupLayout="@layout/keyboard_popup_layout"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp" />

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- ============================================ -->
+    <!-- NORMAL LAYOUT: Sophie links, Inhalt rechts   -->
+    <!-- ============================================ -->
+    <LinearLayout
+        android:id="@+id/normalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingStart="0dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="56dp">
+
+        <!-- Sophie: Clipping-Container, unten abgeschnitten -->
+        <FrameLayout
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:clipChildren="true"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/sophieImageNormal"
+                android:layout_width="420dp"
+                android:layout_height="420dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitCenter"
+                android:contentDescription="Sophie" />
+        </FrameLayout>
+
+        <!-- Rechte Seite -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="12dp"
+            android:paddingTop="16dp">
+
+            <!-- Weiter-Button: fest unten rechts -->
+            <Button
+                android:id="@+id/weiterButtonNormal"
+                android:layout_width="240dp"
+                android:layout_height="86dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_bg"
+                android:text="@string/weiter"
+                android:textColor="@color/button_text"
+                android:textSize="30sp"
+                android:textAllCaps="false"
+                android:letterSpacing="0.05" />
+
+            <!-- Eingabe-Zeile: Textfeld + großer Fertig-Knopf -->
+            <LinearLayout
+                android:id="@+id/inputRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/weiterButtonNormal"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <!-- Eingabefeld: flagNoExtractUi verhindert Vollbild-Tastatur -->
+                <EditText
+                    android:id="@+id/inputField"
+                    android:layout_width="0dp"
+                    android:layout_height="86dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_bg"
+                    android:textSize="32sp"
+                    android:textColor="@color/text_primary"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:hint="@string/name_hint"
+                    android:textColorHint="#888888"
+                    android:inputType="textPersonName|textNoSuggestions"
+                    android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen"
+                    android:maxLines="1" />
+
+                <Button
+                    android:id="@+id/fertigButton"
+                    android:layout_width="200dp"
+                    android:layout_height="86dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/button_bg"
+                    android:text="Fertig"
+                    android:textColor="@color/button_text"
+                    android:textSize="30sp"
+                    android:textAllCaps="false"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+
+            <!-- Sprechblase: scrollbar mit sichtbarem schwarzen Balken -->
+            <ScrollView
+                android:id="@+id/speechScrollNormal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/inputRow"
+                android:layout_marginBottom="12dp"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+                android:scrollbarSize="8dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:fadeScrollbars="false"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/speechBubbleNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speech_bubble_bg"
+                    android:padding="24dp"
+                    android:orientation="vertical"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:id="@+id/speechTextNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="32sp"
+                        android:textColor="@color/text_primary"
+                        android:lineSpacingExtra="4dp" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- ============================================= -->
+    <!-- ECKEN-LAYOUT: Sophie oben rechts (State 3/4)  -->
+    <!-- ============================================= -->
+    <FrameLayout
+        android:id="@+id/cornerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="56dp"
+        android:visibility="gone">
+
+        <!--
+            Sophie oben rechts: ~5% Abstand vom rechten Rand
+            damit der Finger korrekt in die Ecke zeigt.
+        -->
+        <FrameLayout
+            android:layout_width="300dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="0dp"
+            android:clipChildren="true">
+
+            <ImageView
+                android:id="@+id/sophieImageCorner"
+                android:layout_width="340dp"
+                android:layout_height="340dp"
+                android:layout_gravity="top|center_horizontal"
+                android:scaleType="fitCenter"
+                android:contentDescription="Sophie" />
+        </FrameLayout>
+
+        <!-- Inhalt links -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="40dp"
+            android:paddingEnd="360dp"
+            android:paddingTop="24dp">
+
+            <!-- Weiter-Button: fest unten -->
+            <Button
+                android:id="@+id/weiterButtonCorner"
+                android:layout_width="240dp"
+                android:layout_height="86dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_bg"
+                android:text="@string/weiter"
+                android:textColor="@color/button_text"
+                android:textSize="30sp"
+                android:textAllCaps="false"
+                android:letterSpacing="0.05"
+                android:visibility="gone" />
+
+            <!-- Sprechblase: scrollbar mit sichtbarem schwarzen Balken -->
+            <ScrollView
+                android:id="@+id/speechScrollCorner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/weiterButtonCorner"
+                android:layout_marginBottom="12dp"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+                android:scrollbarSize="8dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:fadeScrollbars="false"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/speechBubbleCorner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/speech_bubble_bg"
+                    android:padding="24dp"
+                    android:orientation="vertical"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:id="@+id/speechTextCorner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="32sp"
+                        android:textColor="@color/text_primary"
+                        android:lineSpacingExtra="4dp" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- ============================================= -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================= -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/footer"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:background="@color/footer_bg" />
+
+</FrameLayout>

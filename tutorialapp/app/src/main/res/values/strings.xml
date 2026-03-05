@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MS Intro</string>
+    <string name="footer">© Moritzsoft</string>
+    <string name="weiter">Weiter</string>
+    <string name="name_hint">Deinen Namen eingeben…</string>
+    <string name="word_hint">Wort eingeben…</string>
+</resources>
