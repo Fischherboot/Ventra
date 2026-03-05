@@ -1,0 +1,5 @@
+first reset user data (important)
+
+adb shell pm uninstall --user 0 de.sd_concept.iq_tab
+
+adb shell pm uninstall --user 0 com.adups.fota
