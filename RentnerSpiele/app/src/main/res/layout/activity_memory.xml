@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA6A6A6">
+
+    <!-- Selection Screen -->
+    <LinearLayout
+        android:id="@+id/selectionScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memory_title"
+            android:textColor="#FF1A1A1A"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memory_choose"
+            android:textColor="#FF333333"
+            android:textSize="30sp"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btn12Pairs"
+            android:layout_width="360dp"
+            android:layout_height="88dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_difficulty"
+            android:text="@string/memory_12_pairs"
+            android:textColor="#FFFFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn16Pairs"
+            android:layout_width="360dp"
+            android:layout_height="88dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_difficulty"
+            android:text="@string/memory_16_pairs"
+            android:textColor="#FFFFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnBackFromSelection"
+            android:layout_width="360dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_back"
+            android:text="@string/btn_back"
+            android:textColor="#FFFFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Game Screen -->
+    <LinearLayout
+        android:id="@+id/gameScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <!-- Top bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/txtMemoryStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/memory_title"
+                android:textColor="#FF1A1A1A"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnNewMemory"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/btn_new_game"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/btn_new_game"
+                android:textColor="#FFFFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBackFromGame"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:background="@drawable/btn_back"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/btn_back"
+                android:textColor="#FFFFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Card Grid -->
+        <GridLayout
+            android:id="@+id/cardGrid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="© Moritzsoft"
+            android:textColor="#88555555"
+            android:textSize="11sp"
+            android:paddingEnd="8dp" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rentner Spiele</string>
+
+    <string name="btn_back">Zurück</string>
+    <string name="btn_new_game">Neues Spiel</string>
+    <string name="btn_help">Hilfe</string>
+    <string name="btn_hint">Tipp</string>
+    <string name="btn_check">Prüfen</string>
+    <string name="btn_delete">Löschen</string>
+    <string name="btn_understood">Verstanden</string>
+    <string name="game_won">Geschafft!</string>
+    <string name="coming_soon">Dieses Spiel kommt in einem zukünftigen Update.</string>
+
+    <string name="difficulty_easy">Leicht</string>
+    <string name="difficulty_medium">Mittel</string>
+    <string name="difficulty_hard">Schwer</string>
+    <string name="choose_difficulty">Schwierigkeit wählen</string>
+
+    <string name="sudoku_title">Sudoku</string>
+    <string name="memory_title">Memory</string>
+    <string name="memory_12_pairs">12 Paare</string>
+    <string name="memory_16_pairs">16 Paare</string>
+    <string name="memory_choose">Wie viele Paare?</string>
+    <string name="wortfinder_title">Wortfinder</string>
+    <string name="wortfinder_found">%d von %d gefunden</string>
+    <string name="wortfinder_all_found">Alle Wörter gefunden!</string>
+    <string name="buchstaben_title">Buchstaben Zuweisen</string>
+    <string name="buchstaben_assign">Zahl antippen, dann Buchstabe wählen</string>
+
+    <string name="help_title">Spielanleitungen</string>
+
+    <string name="help_sudoku_title">Sudoku</string>
+    <string name="help_sudoku_text">Füllen Sie das Gitter mit den Zahlen 1 bis 9.\nJede Zahl darf in jeder Zeile, jeder Spalte und jedem 3×3-Kasten nur einmal vorkommen.\n\nTippen Sie auf ein leeres Feld.\nWählen Sie dann unten eine Zahl.\nFalsche Zahlen werden rot angezeigt.</string>
+
+    <string name="help_memory_title">Memory</string>
+    <string name="help_memory_text">Finden Sie alle Kartenpaare.\n\nTippen Sie auf eine Karte, um sie umzudrehen.\nTippen Sie dann auf eine zweite Karte.\nSind beide gleich, bleiben sie offen.\nSind sie verschieden, drehen sie sich wieder um.</string>
+
+    <string name="help_wortfinder_title">Wortfinder</string>
+    <string name="help_wortfinder_text">Finden Sie alle versteckten Wörter im Buchstabengitter.\n\nDie Wörter stehen waagerecht oder senkrecht.\nTippen Sie auf den ersten Buchstaben und ziehen Sie zum letzten.\nGefundene Wörter werden farbig markiert.</string>
+
+    <string name="help_buchstaben_title">Buchstaben Zuweisen</string>
+    <string name="help_buchstaben_text">Jede Zahl steht für einen Buchstaben.\n\nTippen Sie auf eine Zahl im Rätsel.\nWählen Sie dann den passenden Buchstaben.\nEinige Buchstaben sind schon vorgegeben.\nZiel: Alle Zahlen richtig entschlüsseln!</string>
+
+    <string name="help_dame_title">Dame</string>
+    <string name="help_dame_text">Ziehen Sie Ihre Steine schräg vorwärts.\n\nÜberspringen Sie gegnerische Steine, um sie zu schlagen.\nErreicht ein Stein die andere Seite, wird er zur Dame.\nDie Dame darf auch rückwärts ziehen.\nWer keine Steine mehr hat, verliert.</string>
+
+    <string name="help_schach_title">Schach</string>
+    <string name="help_schach_text">Tippen Sie auf eine Figur.\nDie möglichen Felder leuchten auf.\nTippen Sie dann auf das Zielfeld.\n\nZiel: Den gegnerischen König schachmatt setzen.\nJede Figur bewegt sich anders.\nDer König darf nicht geschlagen werden.</string>
+
+    <string name="help_halma_title">Halma</string>
+    <string name="help_halma_text">Bewegen Sie alle Ihre Steine auf die gegenüberliegende Seite.\n\nTippen Sie auf einen Stein.\nTippen Sie dann auf ein Nachbarfeld oder springen Sie über andere Steine.\nSie dürfen mehrfach hintereinander springen.\nWer zuerst alle Steine drüben hat, gewinnt.</string>
+
+    <string name="help_mensch_title">Mensch ärgere dich nicht</string>
+    <string name="help_mensch_text">Würfeln Sie und ziehen Sie Ihre Figuren ins Ziel.\n\nMit einer 6 dürfen Sie eine neue Figur einsetzen.\nLanden Sie auf einem Gegner, fliegt er raus.\nWer zuerst alle 4 Figuren im Ziel hat, gewinnt.\nBei einer 6 dürfen Sie nochmal würfeln.</string>
+
+    <string name="help_solitaer_title">Solitär (Brettspiel)</string>
+    <string name="help_solitaer_text">Überspringen Sie Stifte, um sie vom Brett zu nehmen.\n\nTippen Sie auf einen Stift.\nSpringen Sie über einen Nachbarstift auf ein leeres Feld.\nDer übersprungene Stift wird entfernt.\nZiel: Nur noch einen Stift übrig lassen!</string>
+</resources>

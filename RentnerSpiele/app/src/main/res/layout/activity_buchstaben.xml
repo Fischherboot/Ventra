@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF263238">
+
+    <!-- ========== DIFFICULTY SELECTION SCREEN ========== -->
+    <LinearLayout
+        android:id="@+id/difficultyScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zahlenrätsel"
+            android:textColor="#FFFFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schwierigkeit wählen"
+            android:textColor="#AAFFFFFF"
+            android:textSize="18sp"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnEasy"
+            android:layout_width="280dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:text="Einfach"
+            android:textSize="22sp"
+            android:textColor="#FF1A1A1A"
+            android:textStyle="bold"
+            android:background="@drawable/btn_letter" />
+
+        <Button
+            android:id="@+id/btnMedium"
+            android:layout_width="280dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:text="Mittel"
+            android:textSize="22sp"
+            android:textColor="#FF1A1A1A"
+            android:textStyle="bold"
+            android:background="@drawable/btn_letter" />
+
+        <Button
+            android:id="@+id/btnHard"
+            android:layout_width="280dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="24dp"
+            android:text="Schwer"
+            android:textSize="22sp"
+            android:textColor="#FF1A1A1A"
+            android:textStyle="bold"
+            android:background="@drawable/btn_letter" />
+
+        <Button
+            android:id="@+id/btnBackDiff"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
+            android:text="Zurück"
+            android:textSize="18sp"
+            android:textColor="#FFFFFFFF"
+            android:background="@drawable/btn_numpad" />
+    </LinearLayout>
+
+    <!-- ========== GAME SCREEN ========== -->
+    <LinearLayout
+        android:id="@+id/gameScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- TOP BAR: back, info, actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:background="#FF1B2631">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:text="◀"
+                android:textSize="18sp"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/btn_numpad"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/txtSelectedNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Zahl antippen,\ndann Buchstabe wählen"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:lines="2"
+                android:maxLines="2" />
+
+            <Button
+                android:id="@+id/btnClearLetter"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:text="✕"
+                android:textSize="16sp"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/btn_numpad"
+                android:layout_marginStart="4dp" />
+
+            <Button
+                android:id="@+id/btnHint"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:text="💡"
+                android:textSize="16sp"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/btn_numpad"
+                android:layout_marginStart="4dp" />
+
+            <Button
+                android:id="@+id/btnNewGame"
+                android:layout_width="48dp"
+                android:layout_height="44dp"
+                android:text="🔄"
+                android:textSize="16sp"
+                android:textColor="#FFFFFFFF"
+                android:background="@drawable/btn_numpad"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- PUZZLE AREA: takes ALL remaining space -->
+        <!-- height=0dp + weight=1 = "fill whatever is left after keyboard" -->
+        <FrameLayout
+            android:id="@+id/puzzleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FF333333" />
+
+        <!-- KEYBOARD: wrap_content = always fully visible, never clipped -->
+        <GridLayout
+            android:id="@+id/letterGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF263238"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

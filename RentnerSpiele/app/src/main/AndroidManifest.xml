@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:targetApi="29">
+
+        <activity android:name=".MainActivity" android:exported="true"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SudokuActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".MemoryActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".WortfinderActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".BuchstabenActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".DameActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".SchachActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".HalmaActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".MenschActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+        <activity android:name=".SolitaerActivity" android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|fontScale|density" />
+
+    </application>
+</manifest>
